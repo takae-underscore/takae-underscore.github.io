@@ -2,7 +2,7 @@
 
 <html>
 <head>
-    <title>{{ page.title }}</title>
+    <title>An Example Post</title>
     <meta charset='UTF-8'>
     <meta content='width=device-width, initial-scale=1' name='viewport'/>
 
@@ -15,26 +15,38 @@
 </head>
 <body>
 <div class='content'>
-    {% include nav.html %}
+    <!DOCTYPE html>
+
+<div class='nav'>
+    <ul class='wrap'>
+        <li><a href='/'>Home</a></li>
+    </ul>
+</div>
+
     <div class='front-matter'>
         <div class='wrap'>
-            <h1>{{ page.title }}</h1>
-            <h4>{{ page.subtitle }}</h4>
+            <h1>An Example Post</h1>
+            <h4>Here is some extra detail about the post.</h4>
             <div class='bylines'>
                 <div class='byline'>
                     <h3>Published</h3>
-                    <p>{{ page.date |  date: '%d %B %Y' }}</p>
+                    <p>21 June 2020</p>
                 </div>
             </div>
             <div class='clear'></div>
         </div>
     </div>
     <div class='wrap article'>
-        {{ content }}
+        <p>Here are some words. And this is some math:</p>
+
+<p>e = mc^2. \tag{1}</p>
+
+<p>Cool!</p>
+
     </div>
     <div id='bibliography'>
         <div class='wrap'>
-            {% bibliography --cited %}
+            <ol class="bibliography"></ol>
         </div>
     </div>
 </div>

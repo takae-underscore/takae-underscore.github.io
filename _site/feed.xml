@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-09-16T02:48:00-07:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">An Example Post</title><link href="http://localhost:4000/blog/2020/06/21/example/" rel="alternate" type="text/html" title="An Example Post" /><published>2020-06-21T00:00:00-07:00</published><updated>2020-06-21T00:00:00-07:00</updated><id>http://localhost:4000/blog/2020/06/21/example</id><content type="html" xml:base="http://localhost:4000/blog/2020/06/21/example/"><![CDATA[<p>Here are some words. And this is some math:</p>
+
+<p>e = mc^2. \tag{1}</p>
+
+<p>Cool!</p>]]></content><author><name></name></author><summary type="html"><![CDATA[Here are some words. And this is some math:]]></summary></entry></feed>
