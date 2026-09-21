@@ -4,7 +4,7 @@ subtitle: After several years, I finally understand the change-of-basis matrix.
 layout: default
 date: 2026-09-17
 keywords: linear algebra
-published: false
+published: true
 ---
 
 I recently came across a linear algebra problem about change of basis, which went something like this:
@@ -54,4 +54,19 @@ But doesn't that seem really weird? Like, now we have a vector expressed in term
 
 Things become clearer if we're transitioning from the standard basis. These basis vectors we've been working with are themselves expressed in terms of the standard basis, which kind of obscures what's going on. So let's do the problem again, but instead we'll transition from the standard basis, $$E = \{\left(\begin{smallmatrix}1\\0\end{smallmatrix}\right),\left(\begin{smallmatrix}0\\1\end{smallmatrix}\right)\}$$ to $$B_{old}$$.
 
-**Solution:** Let $$e_1,e_2$$ denote the standard basis vectors. We'll do this exactly the same way, so we'll first need to find out what the coordinate representations of $$e_1,e_2$$ are in terms of $$B_{old}$$; i.e. figure out what $$c_1,c_2,d_1,d_2$$ are but for this particular case. This can be done pretty easily with some trial and error since the vectors are simple: $$c_1=1,c_2=0,d_1=-1,d_2=1$$. Then for some vector $$w$$ with standard coordinate representation $$\left(\begin{smallmatrix}a\\ b\end{smallmatrix}\right)$$, 
+**Solution:** Let $$e_1,e_2$$ denote the standard basis vectors. We'll do this exactly the same way, so we'll first need to find out what the coordinate representations of $$e_1,e_2$$ are in terms of $$B_{old}$$; i.e. figure out what $$c_1,c_2,d_1,d_2$$ are but for this particular case. This can be done pretty easily with some trial and error since the vectors are simple: $$c_1=1,c_2=0,d_1=-1,d_2=1$$ (in other words, with respect to $$B_{old}$$, $$e_1$$ is $$\left(\begin{smallmatrix}1\\0\end{smallmatrix}\right)$$ and $$e_2$$ is $$\left(\begin{smallmatrix}-1\\1\end{smallmatrix}\right)$$). Then for some vector $$w$$ with standard coordinate representation $$\left(\begin{smallmatrix}a\\ b\end{smallmatrix}\right)$$, we have
+
+$$\begin{aligned}
+w &= ae_2+be_2 \\
+&= au_1+b(-u_1+u_2) \\
+&= (a-b)u_1+bu_2
+\end{aligned}$$
+
+This means that $$w_{old} = \left(\begin{smallmatrix}a-b\\ b\end{smallmatrix}\right)$$. Then
+
+$$\left(\begin{matrix}a-b\\ b\end{matrix}\right)
+= \left(\begin{matrix}1&-1\\0&1\end{matrix}\right)\left(\begin{matrix}a\\ b\end{matrix}\right)$$
+
+Taking the inverse of this $$2 \times 2$$ matrix, we get that $$A = \left(\begin{smallmatrix}1&1\\0&1\end{smallmatrix}\right)$$ is our change-of-basis matrix. $$\square$$.
+
+Well this is interesting, because this time this inverted matrix doesn't seem weird to me at all. This matrix encodes the linear transformation which sends $$\spmat{1\\0}$$ to $$\spmat{1\\0}$$ and $$\spmat{0\\1}$$ to $$\spmat{1\\1}$$. In other words, $$A$$ quite literally changes the basis $$E$$ into $$B_{old}$$. 

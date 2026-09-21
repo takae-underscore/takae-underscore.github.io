@@ -19,3 +19,5 @@ jektex:
     - ["\\R", "\\mathbb{R}"]
     - ["\\Q", "\\mathbb{Q}"]
     - ["\\C", "\\mathbb{C}"]
+    - ["\\pmat", "\\begin{pmatrix}#1\\end{pmatrix}"]
+    - ["\\spmat", "\\left(\\begin{smallmatrix}#1\\end{smallmatrix}\\right)"]
