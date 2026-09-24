@@ -21,3 +21,4 @@ jektex:
     - ["\\C", "\\mathbb{C}"]
     - ["\\pmat", "\\begin{pmatrix}#1\\end{pmatrix}"]
     - ["\\spmat", "\\left(\\begin{smallmatrix}#1\\end{smallmatrix}\\right)"]
+    - ["\\vec", "\\mathbf{#1}"]
