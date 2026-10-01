@@ -1,4 +1,35 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-09-23T22:56:19-07:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">The Change-of-Basis Matrix</title><link href="http://localhost:4000/blog/2026/09/23/change_of_basis/" rel="alternate" type="text/html" title="The Change-of-Basis Matrix" /><published>2026-09-23T00:00:00-07:00</published><updated>2026-09-23T00:00:00-07:00</updated><id>http://localhost:4000/blog/2026/09/23/change_of_basis</id><content type="html" xml:base="http://localhost:4000/blog/2026/09/23/change_of_basis/"><![CDATA[<h3 id="1-introduction">1. Introduction</h3>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-09-30T22:29:24-07:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">Invertible Matrices</title><link href="http://localhost:4000/blog/2026/09/24/invertible_matrices/" rel="alternate" type="text/html" title="Invertible Matrices" /><published>2026-09-24T00:00:00-07:00</published><updated>2026-09-24T00:00:00-07:00</updated><id>http://localhost:4000/blog/2026/09/24/invertible_matrices</id><content type="html" xml:base="http://localhost:4000/blog/2026/09/24/invertible_matrices/"><![CDATA[<h3 id="1-introduction">1. Introduction</h3>
+<p>I remember back when I took my first linear algebra class that half the class was taken up by a theorem called the Invertible Matrix Theorem, which listed many equivalent characterizations of an invertible matrix. At the time, I felt that even though I could see that each condition was equivalent to the others, it all felt very disconnected, which made it hard to remember the whole theorem. It also didn’t help that the theorem was spread out over so many weeks. Looking back at it now though, it’s very easy for me to see how everything is related, and so I thought it would be fun to write a post about it. Nothing I say here will be particularly formal since I’m just trying to give a broad idea of how things connect together and why they should make sense.</p>
+
+<h3 id="2-the-theorem">2. The Theorem</h3>
+<p>There are like a billion conditions that are equivalent to invertability, and not all of them are equally important. Wikipedia has a pretty good list of all the important conditions, so I’ll state Wikipedia’s version of the theorem here.</p>
+
+<p><strong>Theorem (Invertible Matrix Theorem):</strong> Let \(A\) be a square \(n \times n\) matrix over \(\C\) (or \(\R\), or any field \(k\), but if you know what a field is you probably don’t need this post). Then the following statements are equivalent:</p>
+<ol>
+  <li>\(A\) is invertible under matrix multiplication.</li>
+  <li>The linear transformation \(\phi\) which maps \(\vec{x}\) to \(A\vec{x}\) is invertible under function composition.</li>
+  <li>The transpose \(\mtrans{A}\) is invertible.</li>
+  <li>\(A\) is row-equivalent to the \(n\times n\) identity matrix \(I_n\).</li>
+  <li>\(A\) is column-equivalent to the \(n\times n\) identity matrix \(I_n\).</li>
+  <li>\(A\) has \(n\) pivot positions.</li>
+  <li>\(A\) has full rank.</li>
+  <li>\(A\) has a trivial kernel.</li>
+  <li>The linear transformation \(\phi\) as defined above is bijective. In other words, the equation \(A\vec{x} = \vec{b}\) has a unique solution for every \(\vec{b}\) in \(\C^n\).</li>
+  <li>The columns of \(A\) form a basis of \(\C^n\). Equivalently, the column space of \(A\) is \(\C^n\).</li>
+  <li>The rows of \(A\) form a basis of \(\C^n\). Equivalently, the row space of \(A\) is \(\C^n\).</li>
+  <li>The determinant of \(A\) is nonzero.</li>
+  <li>0 is not an eigenvalue of \(A\).</li>
+  <li>The matrix \(A\) can be expressed as a finite product of elementary matrices.</li>
+</ol>
+
+<h3 id="3-inverse-matrices-and-linear-transformations">3. Inverse Matrices and Linear Transformations.</h3>
+<p>Everyone knows that dividing a nonzero number by itself yields 1. Everyone also knows that dividing is equivalent to multiplying by the reciprocal of that number, so</p>
+
+\[2 \div 2 = \frac{1}{2}\cdot 2 = 1\]
+
+<p>Effectively, multiplication by \(\frac{1}{2}\) reverses the action of multiplication by 2 since multiplying by 1 doesn’t do anything, so we call \(\frac{1}{2}\) the (multiplicative) inverse of 2. Similarly, the inverse of a square \(n\times n\) matrix \(A\) is a \(n\times n\) matrix \(A^{-1}\) such that \(A^{-1}A = I_n\), where \(I_n\) denotes the \(n\times n\) identity matrix. \(I_n\) takes the place of 1 here since multiplication by \(I_n\) doesn’t do anything. Since matrix multiplication isn’t commutative, we also want to specify that \(AA^{-1} = I_n\) since \(A\) should be the inverse of \(\inv{A}\). This takes care of condition 1.</p>
+
+<p>If we specify a basis, then we can interpret multiplication by \(A\) as the linear transformation \(\phi\) which takes vectors \(\vec{x}\) to \(A\vec{x}\). If \(\inv{A}\) exists, then multiplying by \(\inv{A}\) can be interpreted as the linear transformation \(\inv{\phi}\) taking vectors \(\vec{x}\) to \(\inv{A}\vec{x}\). Then obviously, applying the two transformations \(\phi\) and \(\inv{\phi}\) in any order results in nothing happening, which means that the two transformations are inverses under function composition. The reverse is true too: This takes care of condition 2.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[1. Introduction I remember back when I took my first linear algebra class that half the class was taken up by a theorem called the Invertible Matrix Theorem, which listed many equivalent characterizations of an invertible matrix. At the time, I felt that even though I could see that each condition was equivalent to the others, it all felt very disconnected, which made it hard to remember the whole theorem. It also didn’t help that the theorem was spread out over so many weeks. Looking back at it now though, it’s very easy for me to see how everything is related, and so I thought it would be fun to write a post about it. Nothing I say here will be particularly formal since I’m just trying to give a broad idea of how things connect together and why they should make sense.]]></summary></entry><entry><title type="html">The Change-of-Basis Matrix</title><link href="http://localhost:4000/blog/2026/09/23/change_of_basis/" rel="alternate" type="text/html" title="The Change-of-Basis Matrix" /><published>2026-09-23T00:00:00-07:00</published><updated>2026-09-23T00:00:00-07:00</updated><id>http://localhost:4000/blog/2026/09/23/change_of_basis</id><content type="html" xml:base="http://localhost:4000/blog/2026/09/23/change_of_basis/"><![CDATA[<h3 id="1-introduction">1. Introduction</h3>
 
 <p>I recently came across a linear algebra problem about change of basis, which went something like this:</p>
 
