@@ -30,6 +30,8 @@ There are like a billion conditions that are equivalent to invertability, and no
 13. 0 is not an eigenvalue of $$A$$.
 14. The matrix $$A$$ can be expressed as a finite product of elementary matrices.
 
+This might seem intimidating and you might not know all the terms that are used here, but don't worry! Things will start to make more sense as we go along.
+
 ### 3. Inverse Matrices and Linear Transformations.
 Everyone knows that dividing a nonzero number by itself yields 1. Everyone also knows that dividing is equivalent to multiplying by the reciprocal of that number, so 
 
@@ -37,5 +39,11 @@ $$2 \div 2 = \frac{1}{2}\cdot 2 = 1$$
 
 Effectively, multiplication by $$\frac{1}{2}$$ reverses the action of multiplication by 2 since multiplying by 1 doesn't do anything, so we call $$\frac{1}{2}$$ the (multiplicative) inverse of 2. Similarly, the inverse of a square $$n\times n$$ matrix $$A$$ is a $$n\times n$$ matrix $$A^{-1}$$ such that $$A^{-1}A = I_n$$, where $$I_n$$ denotes the $$n\times n$$ identity matrix. $$I_n$$ takes the place of 1 here since multiplication by $$I_n$$ doesn't do anything. Since matrix multiplication isn't commutative, we also want to specify that $$AA^{-1} = I_n$$ since $$A$$ should be the inverse of $$\inv{A}$$. This takes care of condition 1.
 
-If we specify a basis, then we can interpret multiplication by $$A$$ as the linear transformation $$\phi$$ which takes vectors $$\vec{x}$$ to $$A\vec{x}$$. If $$\inv{A}$$ exists, then multiplying by $$\inv{A}$$ can be interpreted as the linear transformation $$\inv{\phi}$$ taking vectors $$\vec{x}$$ to $$\inv{A}\vec{x}$$. Then obviously, applying the two transformations $$\phi$$ and $$\inv{\phi}$$ in any order results in nothing happening, which means that the two transformations are inverses under function composition. The opposite is true too: $$\phi$$ having an inverse would mean that there's some linear transformation taking $$A\vec{x}$$ back to $$\vec{x}$$, so clearly some matrix that undoes $$A$$ has to exist. This takes care of condition 2.
+If we specify a basis, then we can interpret multiplication by $$A$$ as the linear transformation $$\phi$$ which takes vectors $$\vec{x}$$ to $$A\vec{x}$$. If $$\inv{A}$$ exists, then multiplying by $$\inv{A}$$ can be interpreted as the linear transformation $$\inv{\phi}$$ taking vectors $$\vec{x}$$ to $$\inv{A}\vec{x}$$. Then obviously, applying the two transformations $$\phi$$ and $$\inv{\phi}$$ in any order results in nothing happening, which means that the two transformations are inverses under function composition. The converse is true too: $$\phi$$ having an inverse would mean that there's some linear transformation taking $$A\vec{x}$$ back to $$\vec{x}$$, so clearly some matrix that undoes $$A$$ has to exist. This takes care of condition 2.
 
+Now that we've established this strong connection between invertible matrices and invertible linear transformations, we can now talk about what makes a linear transformation invertible instead of directly speaking of matrices.
+
+### 4. Invertible Linear Transformations
+A linear transformation is a special type of function. When you hear the word "function", you might immediately think of a graph, but that's just a visualization of the information encoded by the function. Instead, think of a function as a phone book. I can take any phone number and the phone book will tell me who owns that number. Now suppose that I have a crush on a girl with an extremely common name and, despite everyone telling me not to, I want to find her phone number so that I can ask her out over text. Will I be able to do this?
+
+Luckily for future me, I won't have to endure a lifetime of embarrassment from my peers because it's entirely possible that I won't be able to find her number. For instance, if there are two people with the same name 
