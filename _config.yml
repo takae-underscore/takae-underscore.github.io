@@ -24,3 +24,5 @@ jektex:
     - ["\\vec", "\\mathbf{#1}"]
     - ["\\mtrans", "#1^\\mathrm{T}"]
     - ["\\inv", "#1^{-1}"]
+    - ["\\ima", "\\operatorname{im}#1"]
+    - ["\\amat", "\\left(\\!\\!\\!\\begin{array}{#1|#2}#3\\end{array}\\!\\!\\!\\right)"]
