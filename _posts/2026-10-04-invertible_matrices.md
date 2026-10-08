@@ -3,8 +3,8 @@ title: Invertible Matrices
 subtitle: 
 layout: default
 date: 2026-10-4
-keywords: elementary algebra
-published: true
+keywords: linear algebra
+published: false
 ---
 
 
