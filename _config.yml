@@ -26,3 +26,4 @@ jektex:
     - ["\\inv", "#1^{-1}"]
     - ["\\ima", "\\operatorname{im}#1"]
     - ["\\amat", "\\left(\\!\\!\\!\\begin{array}{#1|#2}#3\\end{array}\\!\\!\\!\\right)"]
+    - ["\\crd", "\\operatorname{crd}#1"]
